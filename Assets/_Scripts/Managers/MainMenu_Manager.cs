@@ -224,11 +224,15 @@ public class MainMenu_Manager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex <= MaxLevel - 1)
         {
             LastLevelReached = SceneManager.GetActiveScene().buildIndex + 1;
+            LastLevelReached = Math.Clamp(LastLevelReached, 1, MaxLevel - 1);
+            print("LastLevelReached"+LastLevelReached);
             PlayerPrefs.SetInt("LastLevelReached", LastLevelReached + 1);
         }
-        else
+        else 
         {
             LastLevelReached = SceneManager.GetActiveScene().buildIndex;
+            LastLevelReached = Math.Clamp(LastLevelReached, 1, MaxLevel - 1);
+            print("LastLevelReached"+LastLevelReached);
             PlayerPrefs.SetInt("LastLevelReached", LastLevelReached);
         }
     }
