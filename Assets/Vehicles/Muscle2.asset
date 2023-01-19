@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Acceleration: 3900
   MaxSpeed: 8100
-  TurnStrength: 250
+  TurnStrength: 215
   Drag: 0.985
-  DriftForce: 2500
-  DriftTraction: 1.25
-  DefaultTraction: 8
+  DriftForce: 3000
+  DriftTraction: 0.9
+  DefaultTraction: 5
   minPitch: 0.25
   maxPitch: 0.95
   minSpeed: 0

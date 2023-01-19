@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db093469822083d4db7fa67a5f6177d3, type: 3}
   m_Name: PoliceSports
   m_EditorClassIdentifier: 
-  Acceleration: 4100
-  MaxSpeed: 8400
-  TurnStrength: 255
-  Drag: 0.985
-  DriftForce: 2500
-  DriftTraction: 1.25
-  DefaultTraction: 8
+  Acceleration: 3500
+  MaxSpeed: 8000
+  TurnStrength: 260
+  Drag: 0.8
+  DriftForce: 2000
+  DriftTraction: 0.75
+  DefaultTraction: 3
   minPitch: 0.25
   maxPitch: 0.95
   minSpeed: 0

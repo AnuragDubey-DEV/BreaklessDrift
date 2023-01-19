@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db093469822083d4db7fa67a5f6177d3, type: 3}
-  m_Name: Puckup
+  m_Name: Pickup
   m_EditorClassIdentifier: 
-  Acceleration: 4300
-  MaxSpeed: 8800
-  TurnStrength: 260
+  Acceleration: 3000
+  MaxSpeed: 7000
+  TurnStrength: 180
   Drag: 0.985
-  DriftForce: 2500
-  DriftTraction: 1.25
-  DefaultTraction: 8
+  DriftForce: 3000
+  DriftTraction: 1
+  DefaultTraction: 6
   minPitch: 0.25
   maxPitch: 0.95
   minSpeed: 0

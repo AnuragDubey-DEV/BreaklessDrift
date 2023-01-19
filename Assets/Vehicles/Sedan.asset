@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db093469822083d4db7fa67a5f6177d3, type: 3}
   m_Name: Sedan
   m_EditorClassIdentifier: 
-  Acceleration: 4700
-  MaxSpeed: 9999
-  TurnStrength: 270
+  Acceleration: 4200
+  MaxSpeed: 9200
+  TurnStrength: 250
   Drag: 0.985
-  DriftForce: 2500
-  DriftTraction: 1.25
-  DefaultTraction: 8
+  DriftForce: 3000
+  DriftTraction: 1.125
+  DefaultTraction: 4
   minPitch: 0.25
   maxPitch: 0.95
   minSpeed: 0

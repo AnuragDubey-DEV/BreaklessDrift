@@ -75,6 +75,7 @@ public class MainMenu_Manager : MonoBehaviour
         Game_Manager.Instance.OnAfterGameStateChange += GameManagerOnAfterGameStateChange;
         LastLevelReached = PlayerPrefs.GetInt("LastLevelReached") != 0 ? PlayerPrefs.GetInt("LastLevelReached") : 1;
         LastSelectedCar = PlayerPrefs.GetInt("LastSelectedCar") != 0 ? PlayerPrefs.GetInt("LastSelectedCar") : 0;
+        LastLevelReached = Math.Clamp(LastLevelReached, 1, MaxLevel - 1);
         CurrentSelectedCar = LastSelectedCar;
         CurrentSelectedLevel = LastLevelReached;
         CURRENTLEVELSELECTED_DISPLAY.text = $"{CurrentSelectedLevel}";
@@ -175,6 +176,7 @@ public class MainMenu_Manager : MonoBehaviour
     {
         MenuaudioSource.PlayOneShot(StartGame_SFX_GAME);
         StartCoroutine(LoadSceneAsync(LastLevelReached));
+        
     }
     public void Pause()
     {
@@ -253,7 +255,7 @@ public class MainMenu_Manager : MonoBehaviour
     {
         MenuaudioSource.PlayOneShot(ButtonClick_SFX_MENU);
         CurrentSelectedLevel = (CurrentSelectedLevel - 1) % MaxLevel;
-        if (CurrentSelectedLevel == 0) CurrentSelectedLevel = 9;
+        if (CurrentSelectedLevel == 0) CurrentSelectedLevel = MaxLevel - 1;
         CURRENTLEVELSELECTED_DISPLAY.text = $"{CurrentSelectedLevel}";
     }
     public void PlaySelectedLevel()
